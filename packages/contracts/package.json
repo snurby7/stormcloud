@@ -1,0 +1,7 @@
+{
+  "name": "contracts",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "yarn@3.0.2",
+  "main": "index.ts"
+}

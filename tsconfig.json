@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+    },
+    "exclude": [
+        "packages/**"
+    ],
+    "references": [{
+            "path": "./packages/api"
+        },
+        {
+            "path": "./packages/contracts"
+        },
+        {
+            "path": "./packages/moneystorm"
+        }
+    ]
+}
