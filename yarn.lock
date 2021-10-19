@@ -3376,9 +3376,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"api@workspace:packages/api":
+"api@workspace:apps/api":
   version: 0.0.0-use.local
-  resolution: "api@workspace:packages/api"
+  resolution: "api@workspace:apps/api"
   dependencies:
     "@nestjs/cli": ^8.0.0
     "@nestjs/common": ^8.0.0
@@ -4679,9 +4679,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contracts@0.0.1, contracts@workspace:packages/contracts":
+"contracts@0.0.1, contracts@workspace:shared/contracts":
   version: 0.0.0-use.local
-  resolution: "contracts@workspace:packages/contracts"
+  resolution: "contracts@workspace:shared/contracts"
   languageName: unknown
   linkType: soft
 
@@ -9461,9 +9461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moneystorm@workspace:packages/moneystorm":
+"moneystorm@workspace:apps/moneystorm":
   version: 0.0.0-use.local
-  resolution: "moneystorm@workspace:packages/moneystorm"
+  resolution: "moneystorm@workspace:apps/moneystorm"
   dependencies:
     "@types/react": 17.0.29
     eslint: 8.0.1

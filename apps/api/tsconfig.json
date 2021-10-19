@@ -1,8 +1,5 @@
 {
     "extends": "../../tsconfig.json",
-    "references": [{
-        "path": "../contracts"
-    }],
     "compilerOptions": {
         "strict": true,
         "composite": true,
