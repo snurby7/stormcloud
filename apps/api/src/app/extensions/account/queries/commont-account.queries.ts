@@ -1,5 +1,5 @@
-import { ExecuteStatement } from '../../../neo4j'
-import { IAccountLinkedNodeMeta } from '../contracts'
+import { ExecuteStatement } from '../../../neo4j';
+import { IAccountLinkedNodeMeta } from '../contracts';
 
 /**
  * This function is used to take a linked node and update it's balance whether it's additive or subtractive
@@ -11,7 +11,7 @@ import { IAccountLinkedNodeMeta } from '../contracts'
 export const updateLinkedNodeBalance = (
   resultKey: string,
   linkedAccountMeta: IAccountLinkedNodeMeta,
-  balance: number = 0
+  balance: number = 0,
 ): ExecuteStatement => ({
   query: `
     MATCH (${resultKey}:${linkedAccountMeta.label} {id: $nodeId, budgetId: $budgetId})
@@ -21,6 +21,9 @@ export const updateLinkedNodeBalance = (
   params: {
     nodeId: linkedAccountMeta.id,
     budgetId: linkedAccountMeta.budgetId,
-    updatedBalance: balance + (linkedAccountMeta.amount || 0) + (linkedAccountMeta.refund || 0),
+    updatedBalance:
+      balance +
+      (linkedAccountMeta.amount || 0) +
+      (linkedAccountMeta.refund || 0),
   },
-})
+});

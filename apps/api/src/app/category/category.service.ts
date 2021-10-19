@@ -83,7 +83,7 @@ export class CategoryService
                     name: parentNode.properties.name,
                     budgetId: parentNode.properties.budgetId,
                     id: parentNode.properties.id,
-                    children: children.details?.map((detail) => ({
+                    children: children.details?.map((detail: any) => ({
                       ...detail.properties,
                     })),
                   });
@@ -135,7 +135,7 @@ export class CategoryService
                     name: parentNode.properties.name,
                     budgetId: parentNode.properties.budgetId,
                     id: parentNode.properties.id,
-                    children: children.details?.map((detail) => ({
+                    children: children.details?.map((detail: any) => ({
                       ...detail.properties,
                     })),
                   });

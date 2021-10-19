@@ -1,22 +1,22 @@
-export { IAccount, IAccountQuery, ICreateAccount } from './account';
-export { IBudget, IBudgetQuery, ICreateBudget, IUpdateBudget } from './budget';
-export {
+export type { IAccount, IAccountQuery, ICreateAccount } from './account';
+export type { IBudget, IBudgetQuery, ICreateBudget, IUpdateBudget } from './budget';
+export type {
   ICategory,
   ICategoryQuery,
   ICategorySearchResponse,
   ICategoryUpdate,
   ICreateCategory,
 } from './category';
-export { IDateModel } from './common';
-export {
+export type { IDateModel } from './common';
+export type {
   IBaseSearchQuery,
   IDateRangeSearchQuery,
   IDeleteResponse,
   IFormattedNode,
   IMonthBoundary,
 } from './generic';
-export { ICreatePayee, IPayee, IPayeeQuery } from './payee';
-export {
+export type { ICreatePayee, IPayee, IPayeeQuery } from './payee';
+export type {
   ICreateTransaction,
   ITransaction,
   ITransactionDeleteRequest,

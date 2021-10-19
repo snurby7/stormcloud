@@ -134,20 +134,7 @@ export class TransactionService {
   public updateTransaction$(
     request: ITransactionDetail,
   ): Observable<ITransactionDetail> {
-    const findMatchingTransaction$ = this.getTransaction(
-      request.id,
-      request.budgetId,
-    ).pipe(
-      map((transaction) => {
-        return transaction
-          ? transaction
-          : throwError(
-              new NotFoundException('No current transaction found to match!'),
-            );
-      }),
-    );
-
-    return findMatchingTransaction$.pipe(
+    return this.getTransaction(request.id, request.budgetId).pipe(
       switchMap((transaction: ITransactionDetail) =>
         forkJoin([...this.updateLinkedNodeBalance$(transaction, request)]),
       ),

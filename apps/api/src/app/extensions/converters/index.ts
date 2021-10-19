@@ -1,1 +1,1 @@
-export * from './ICommonAccountConverter'
+export type { ICommonAccountConverter } from './ICommonAccountConverter';

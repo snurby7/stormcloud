@@ -1,0 +1,20 @@
+{
+  "monorepo": true,
+  "root": "apps/stormcloud",
+  "sourceRoot": "apps/stormcloud/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.json"
+  },
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.json"
+      }
+    }
+  }
+}

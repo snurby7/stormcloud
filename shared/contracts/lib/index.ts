@@ -1,6 +1,6 @@
-export { ICoreNode } from "./core-node.interface";
-export { SupportedAccountType } from "./enums";
-export {
+export type { ICoreNode } from './core-node.interface';
+export { SupportedAccountType } from './enums';
+export type {
   IAccount,
   IAccountQuery,
   IBaseSearchQuery,
@@ -29,4 +29,4 @@ export {
   ITransactionQuery,
   ITransactionSearchResponse,
   IUpdateBudget,
-} from "./interface";
+} from './interface';
