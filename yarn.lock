@@ -1811,8 +1811,8 @@ __metadata:
   linkType: hard
 
 "@nestjs/swagger@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "@nestjs/swagger@npm:5.1.0"
+  version: 5.1.1
+  resolution: "@nestjs/swagger@npm:5.1.1"
   dependencies:
     "@nestjs/mapped-types": 1.0.0
     lodash: 4.17.21
@@ -1828,7 +1828,7 @@ __metadata:
       optional: true
     swagger-ui-express:
       optional: true
-  checksum: 2165ac25339e6fc48d9319f67170aeda66813a787b3f823048fb732757a28e6411e333a8461f43728be14e51b04f871a86efdbff4819141264bc563ddd02a8ad
+  checksum: b2d8cb049b783e5cef8201544a0b3b20ee21fcb758b4dd94589f2e7abff790d0aecb2caed529f13bf1570ce3afa2eca6eaec85607a88bd5cb2a9e03bd0b92be0
   languageName: node
   linkType: hard
 
@@ -2647,9 +2647,9 @@ __metadata:
   linkType: hard
 
 "@types/validator@npm:^13.1.3":
-  version: 13.6.3
-  resolution: "@types/validator@npm:13.6.3"
-  checksum: b06b684d4d1ff4b59449a974cb8cdd96ccde4660958e541acf66711c8f60026912202e4d924ccd2016ec8bdd4e1f71e8122e5c568deefcdecffc04a73acff460
+  version: 13.6.4
+  resolution: "@types/validator@npm:13.6.4"
+  checksum: 7472382d93f1744589b7d9fdd27b349c645cf07a07b871c16c388cababa95fba2065fab3539a444393fdb25a4b757c5bb7ad85be031d9f4ff5507674048c61e5
   languageName: node
   linkType: hard
 
@@ -3421,54 +3421,6 @@ __metadata:
   checksum: 985163db2292fac9e5a1e072bf99f1b5baccf196e4de25a0b0b81865ebddeb3b3eb4480734ef0a2ac8c002845396b91aa89121f5b84f93981a4658164a9ec6e9
   languageName: node
   linkType: hard
-
-"api@workspace:apps/api":
-  version: 0.0.0-use.local
-  resolution: "api@workspace:apps/api"
-  dependencies:
-    "@nestjs/cli": ^8.0.0
-    "@nestjs/common": ^8.0.0
-    "@nestjs/core": ^8.0.0
-    "@nestjs/passport": ^8.0.1
-    "@nestjs/platform-express": ^8.0.0
-    "@nestjs/schematics": ^8.0.0
-    "@nestjs/swagger": ^5.1.0
-    "@nestjs/testing": ^8.0.0
-    "@types/express": ^4.17.13
-    "@types/jest": ^27.0.1
-    "@types/node": ^16.0.0
-    "@types/passport-jwt": ^3.0.6
-    "@types/supertest": ^2.0.11
-    "@types/uuid": ^8.3.1
-    "@typescript-eslint/eslint-plugin": ^4.28.2
-    "@typescript-eslint/parser": ^4.28.2
-    class-transformer: ^0.4.0
-    class-validator: ^0.13.1
-    contracts: 0.0.1
-    dotenv: ^10.0.0
-    eslint: ^7.30.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
-    jest: ^27.0.6
-    jwks-rsa: ^1.8.0
-    neo4j-driver: ^4.3.3
-    nest-router: 1.0.9
-    passport: ^0.4.1
-    passport-jwt: ^4.0.0
-    prettier: ^2.3.2
-    reflect-metadata: ^0.1.13
-    rimraf: ^3.0.2
-    rxjs: ~6.6.3
-    supertest: ^6.1.6
-    swagger-ui-express: ^4.1.6
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    tsconfig-paths: ^3.10.1
-    typescript: ^4.3.5
-    uuid: ^8.3.2
-  languageName: unknown
-  linkType: soft
 
 "append-field@npm:^1.0.0":
   version: 1.0.0
@@ -4731,6 +4683,8 @@ __metadata:
 "contracts@0.0.1, contracts@workspace:shared/contracts":
   version: 0.0.0-use.local
   resolution: "contracts@workspace:shared/contracts"
+  dependencies:
+    typescript: ^4.4.4
   languageName: unknown
   linkType: soft
 
@@ -8817,9 +8771,9 @@ __metadata:
   linkType: hard
 
 "libphonenumber-js@npm:^1.9.7":
-  version: 1.9.37
-  resolution: "libphonenumber-js@npm:1.9.37"
-  checksum: 707d0f0edfa0de5f687a7c6b246e7f612a00ccb1e2f432e0dba6d5a8504206279d889d4c39b4e199148a8654065105a448deada551c1eba116cb1b5d2d9ac4b8
+  version: 1.9.38
+  resolution: "libphonenumber-js@npm:1.9.38"
+  checksum: a22299b8c57feb11acbd3abef7a6b95edbf4917ebcdfaa2294b7859a9b00a750f0240f4abf978a79c635150f5919fd3ec9b9f87b5376be5952a6cd7514cd6212
   languageName: node
   linkType: hard
 
@@ -9634,34 +9588,82 @@ __metadata:
   languageName: node
   linkType: hard
 
-"neo4j-driver-bolt-connection@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "neo4j-driver-bolt-connection@npm:4.3.3"
+"neo4j-driver-bolt-connection@npm:^4.3.4":
+  version: 4.3.4
+  resolution: "neo4j-driver-bolt-connection@npm:4.3.4"
   dependencies:
-    neo4j-driver-core: ^4.3.3
+    neo4j-driver-core: ^4.3.4
     text-encoding-utf-8: ^1.0.2
-  checksum: e462f524544d694fd7d262b536c7dc74c3743c30f2a8fd6408048e3886d624440a0144d12b28e01fe9acb910d4cdbd08a4e3ca2c6b336e13f540de381d20c515
+  checksum: 8dc569ce6174b126bdd650a4941229fb99356d13235062ce5235186cd6ae1747a888b33e514a5300a857979466e0bd842f3bf5143ebbd651dba81dd67e2e0fdf
   languageName: node
   linkType: hard
 
-"neo4j-driver-core@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "neo4j-driver-core@npm:4.3.3"
-  checksum: 015e06f423314116f4ab4cc43246b2ea14c17920024976c5abe46b9d8c1dcca5d4f5c08ee84a5b097e4f12ef698f75e28287b20e75f6730b314b805ce10ffbc5
+"neo4j-driver-core@npm:^4.3.4":
+  version: 4.3.4
+  resolution: "neo4j-driver-core@npm:4.3.4"
+  checksum: 0bc68eb676eb63191da231eb83b06b3fd506c5dd5b1867e2a9c0bfafa2b57d2a2a9f6fd04664f48d7f4ab83d1f1a6e7c6a9e58e4c9246a02f75ee04ca0c1ad33
   languageName: node
   linkType: hard
 
 "neo4j-driver@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "neo4j-driver@npm:4.3.3"
+  version: 4.3.4
+  resolution: "neo4j-driver@npm:4.3.4"
   dependencies:
     "@babel/runtime": ^7.5.5
-    neo4j-driver-bolt-connection: ^4.3.3
-    neo4j-driver-core: ^4.3.3
+    neo4j-driver-bolt-connection: ^4.3.4
+    neo4j-driver-core: ^4.3.4
     rxjs: ^6.6.3
-  checksum: bcea372a87a3fd7216d245413161156d8c19e844da0bd429567645ae94276059d9bbed9fc6aa41dc3f4bfd037732b54fd01244de0b444b60bff8f223f719b2ba
+  checksum: 6d741c84e09754e6b36adab018fa35523b57779a73c99068a8d0582b10f267cc6f0c3ae3b28804f4ed4fd8dabbd64f26a9edda031fc41d80394cc87020970c7c
   languageName: node
   linkType: hard
+
+"nest-api-v2@workspace:apps/api":
+  version: 0.0.0-use.local
+  resolution: "nest-api-v2@workspace:apps/api"
+  dependencies:
+    "@nestjs/cli": ^8.0.0
+    "@nestjs/common": ^8.0.0
+    "@nestjs/core": ^8.0.0
+    "@nestjs/passport": ^8.0.1
+    "@nestjs/platform-express": ^8.0.0
+    "@nestjs/schematics": ^8.0.0
+    "@nestjs/swagger": ^5.1.0
+    "@nestjs/testing": ^8.0.0
+    "@types/express": ^4.17.13
+    "@types/jest": ^27.0.1
+    "@types/node": ^16.0.0
+    "@types/passport-jwt": ^3.0.6
+    "@types/supertest": ^2.0.11
+    "@types/uuid": ^8.3.1
+    "@typescript-eslint/eslint-plugin": ^4.28.2
+    "@typescript-eslint/parser": ^4.28.2
+    class-transformer: ^0.4.0
+    class-validator: ^0.13.1
+    contracts: 0.0.1
+    dotenv: ^10.0.0
+    eslint: ^7.30.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^3.4.0
+    jest: ^27.0.6
+    jwks-rsa: ^1.8.0
+    neo4j-driver: ^4.3.3
+    nest-router: 1.0.9
+    passport: ^0.4.1
+    passport-jwt: ^4.0.0
+    prettier: ^2.3.2
+    reflect-metadata: ^0.1.13
+    rimraf: ^3.0.2
+    rxjs: ~6.6.3
+    supertest: ^6.1.3
+    swagger-ui-express: ^4.1.6
+    ts-jest: ^27.0.3
+    ts-loader: ^9.2.3
+    ts-node: ^10.0.0
+    tsconfig-paths: ^3.10.1
+    typescript: ^4.3.5
+    uuid: ^8.3.2
+  languageName: unknown
+  linkType: soft
 
 "nest-router@npm:1.0.9":
   version: 1.0.9
@@ -12502,7 +12504,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"supertest@npm:^6.1.6":
+"supertest@npm:^6.1.3":
   version: 6.1.6
   resolution: "supertest@npm:6.1.6"
   dependencies:

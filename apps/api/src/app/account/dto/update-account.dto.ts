@@ -5,7 +5,8 @@ import {
   IsString,
   IsUUID,
 } from 'class-validator';
-import { IAccount, SupportedAccountType } from 'contracts';
+import { IAccount } from 'contracts';
+import { SupportedAccountType } from '../../constants';
 
 export class UpdateAccount implements IAccount {
   @IsUUID()
@@ -20,7 +21,7 @@ export class UpdateAccount implements IAccount {
   @IsEnum(SupportedAccountType, {
     message: 'Value must match a supported enum value',
   })
-  type: SupportedAccountType;
+  type: string;
 
   @IsString()
   @IsNotEmpty()

@@ -17,7 +17,6 @@ import {
   ICommonAccountConverter,
 } from '../extensions';
 import { getRecordsByKey, IMammothCoreNode, Neo4jService } from '../neo4j';
-import { RxResult } from '../temp';
 import { CreateCategory, UpdateCategory } from './dto';
 import { categoryQueries } from './queries/category.queries';
 
@@ -255,15 +254,18 @@ export class CategoryService
       budgetId,
     );
     return this.neo4jService.rxSession.writeTransaction((trx) =>
-      (trx.run(query, params) as unknown as RxResult).consume().pipe(
-        map((result) => ({
-          message: `Deleted ${
-            result.counters.updates().nodesDeleted || 0
-          } record(s)`,
-          id: categoryId,
-          isDeleted: result.counters.updates().nodesDeleted > 0,
-        })),
-      ),
+      trx
+        .run(query, params)
+        .consume()
+        .pipe(
+          map((result) => ({
+            message: `Deleted ${
+              result.counters.updates().nodesDeleted || 0
+            } record(s)`,
+            id: categoryId,
+            isDeleted: result.counters.updates().nodesDeleted > 0,
+          })),
+        ),
     );
   }
 

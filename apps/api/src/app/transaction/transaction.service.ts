@@ -25,7 +25,6 @@ import {
   Neo4jService,
 } from '../neo4j';
 import { PayeeService } from '../payee';
-import { RxResult } from '../temp';
 import {
   Transaction_UsedAccount,
   Transaction_UsedCategory,
@@ -360,15 +359,18 @@ export class TransactionService {
       budgetId,
     );
     return this.neo4jService.rxSession.writeTransaction((trx) =>
-      (trx.run(query, params) as unknown as RxResult).consume().pipe(
-        map((result) => ({
-          message: `Deleted ${
-            result.counters.updates().nodesDeleted || 0
-          } record(s)`,
-          isDeleted: true,
-          id: transactionId,
-        })),
-      ),
+      trx
+        .run(query, params)
+        .consume()
+        .pipe(
+          map((result) => ({
+            message: `Deleted ${
+              result.counters.updates().nodesDeleted || 0
+            } record(s)`,
+            isDeleted: true,
+            id: transactionId,
+          })),
+        ),
     );
   }
 }

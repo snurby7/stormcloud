@@ -1,5 +1,4 @@
 export type { ICoreNode } from './core-node.interface';
-export { SupportedAccountType } from './enums';
 export type {
   IAccount,
   IAccountQuery,
